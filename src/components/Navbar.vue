@@ -51,7 +51,7 @@ export default {
 
 h2 {
   color: red;
-  margin-right: 400px;
+  margin-right: 500px;
   background: yellow;
 }
 </style>
