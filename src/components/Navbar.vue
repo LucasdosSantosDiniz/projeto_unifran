@@ -3,7 +3,6 @@
     <router-link to="/" id="logo-url">
       <img :src="logo" :alt="alt" id="logo" />
     </router-link>
-    <h2>OASIS BURGERS</h2>
     <router-link to="/">Home</router-link> |
     <router-link to="/pedidos">Pedidos</router-link>
   </div>
@@ -47,11 +46,5 @@ export default {
 #logo {
   width: 70px;
   height: 60px;
-}
-
-h2 {
-  color: red;
-  margin-right: 500px;
-  background: yellow;
 }
 </style>
