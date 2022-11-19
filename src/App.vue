@@ -1,30 +1,41 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
-  <router-view/>
+  <div>
+    <Navbar :logo="src_logo" :alt="app_name" />
+    <router-view/>    
+    <Footer :logo="src_logo" :alt="app_name"/>
+  </div>
 </template>
-
+<script>
+import Navbar from './components/Navbar.vue';
+import Footer from "./components/Footer.vue";
+export default {
+  components:{
+    Navbar,
+    Footer
+  },
+  data() {
+      return {
+        src_logo:"/img/oasis-burgers.png",
+        app_name:"Oasis Burguers"
+      };
+  },
+}
+</script>
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+*{
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.container {
+  margin: 50px;
+  min-height: 250px;
+}
+h1{
   text-align: center;
-  color: #2c3e50;
-}
-
-nav {
-  padding: 30px;
-}
-
-nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-nav a.router-link-exact-active {
-  color: #42b983;
+  font-size: 42px;
+  margin-bottom:30px;
+  color: black;
 }
 </style>
